@@ -134,16 +134,21 @@ puts phone_number
 
 # 3
 countries_array = [
-    Korea = {
+    first = {
+      name: "Korea",
       continent: "Asia",
       island: false
-    }, Canada = {
+    },{
+      name: "Canada",
       continent: "NA",
       island: false
-    }, Madagascar = {
-      continent: "Africa",
+    },{
+      name: "Madagascar",
+        continent: "Africa",
       island: true
     }]
+
+puts first
 puts countries_array
 
 # Exercise 7
@@ -178,13 +183,13 @@ number_array = []
 end
 print number_array
 # 6
-# new_island_array = []
-# countries_array.map do |key, country|
-#   if country[island] == true
-#     new_island_array.push(country)
-#   end
-# end
-
+new_island_array = []
+countries_array.each do |country|
+  if country[:island] == true
+    new_island_array.push(country)
+  end
+end
+puts new_island_array
 
 # Exercise 8
 expenses = [23, 345.3, 23, 10.5, 10]
