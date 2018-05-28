@@ -90,9 +90,14 @@ puts population_hash
 
 # exercise 5
 # 1
-population_total = population_hash["Toronto"] + population_hash["HK"] + population_hash["Paris"]
+# population_total = population_hash["Toronto"] + population_hash["HK"] + population_hash["Paris"]
 # population_total = population_hash[1] + population_hash[2] + population_hash[0]
-puts population_total
+population_total = 0
+population_hash.each do |city, population|
+  population_total += population
+end
+  puts "The total population is #{population_total}"
+
 
 # 2
 age_hash.map do |name, age|
@@ -115,3 +120,79 @@ end
 # 5
 fave_colours << ["purple", "yellow"]
 puts fave_colours
+
+# Exercise 6
+# 1
+more_movies = {
+  1999 => ["The Matrix", "Star Wars: Episode 1", "The Mummy"],
+  2009 => ["Avatar", "Star Trek", "District 9"],
+  2019 => ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]
+}
+# 2
+phone_number = [123], [456], [789], ["*",0,"#"]
+puts phone_number
+
+# 3
+countries_array = [
+    Korea = {
+      continent: "Asia",
+      island: false
+    }, Canada = {
+      continent: "NA",
+      island: false
+    }, Madagascar = {
+      continent: "Africa",
+      island: true
+    }]
+puts countries_array
+
+# Exercise 7
+# 1
+sentence = "I will not skateboard in the halls\n"
+puts sentence*20
+
+# 2
+array_sentence = []
+array_sentence.fill(sentence, 0, 20)
+
+# 3
+number_array = []
+(0..50).each do |number|
+  number_array = number_array.push(number)
+end
+
+print number_array
+
+# 4
+total = 0
+number_array.each do |number|
+  total += number
+end
+
+puts total
+
+# 5
+number_array = []
+(0..50).each do |number|
+  number_array = number_array.push(number, number, number)
+end
+print number_array
+# 6
+# new_island_array = []
+# countries_array.map do |key, country|
+#   if country[island] == true
+#     new_island_array.push(country)
+#   end
+# end
+
+
+# Exercise 8
+expenses = [23, 345.3, 23, 10.5, 10]
+# expenses = expenses.sum
+
+total = 0
+expenses.each do |paid|
+  total += paid
+end
+
+puts expenses = expenses.push(total)
